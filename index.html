@@ -1,0 +1,52 @@
+<html>
+<div>
+How to add Confetti to a button in JS using a ‘click’ event.
+
+Have you ever come across a button on the Internet that shoots off Confetti when you click it? Have you ever wondered how it works? What if the explanation you received did not apply to the application you built? If you already created your button in a JavaScript file separate from your HTML file, how can you apply the Confetti to the button? I spent some time trying to figure out the exact method for a project I was working on with my peers. I found out there are a ton of ways to incorporate this animation to your code and I want to share with you a method not commonly used. Typically, you will find many websites that allow you to copy and paste the data needed to create the button and the animation. I’m going to walk you through some steps my peers and myself were able to discover. For this example, open a folder in Visual Studio or your code editor program.
+
+
+Step one: Start at this website:
+https://www.cssscript.com/confetti-animation-party/
+
+Step two: Download the Simple Celebration Animation in JavaScript-Party.js
+
+Step three: In your HTML file, copy and paste the Party.js link provided from the website.
+<script defer src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+NOTE: PLACE LINK BETWEEN <head> TAGS
+
+Step four: Now we can apply this animation to our button! For this example, I will be providing code directly from the project the Confetti was used in so you have a visual aid.
+    doneButton.addEventListener('click', (event) => {
+        completeActivity(event)
+        party.confetti(event, {
+            shapes: ["star"],
+            gravity: 75
+        })
+    });
+
+The important things to note about this example is that you need to create a listening event with   “.addEventListener ”. You also want to include the party.confetti() so you can call upon the  Party.js data file that has been linked to the HTML. If you want to have a button do multiple things, you will have to create multiple Listening Events.  (Note: completedActivity(event) does not apply to the animation of the Confetti. Just something specific to our code, you don’t need to remember it)
+
+
+
+
+
+The Party.js file has built in shapes:
+
+	square
+	rectangle
+	circle
+	roundedSquare
+	roundedRectangle
+	star
+
+You can change the value of shapes with anyone of these. The gravity affects the speed of the Confetti shooting out.
+
+CONGRATULATIONS, YOU MADE A CONFETTI ANIMATION!! I really hope this guide helps someone out there. I was frustrated when I couldn’t find an answer out there for this specific method. As a Software Developer, we learn that there are many ways to develop code. We use techniques and methods we are most comfortable with. Mainly, it’s a matter of preference. Good luck to anyone out there who works in tech or wants to learn coding. Coding extremely rewarding, especially when there is Confetti involved. Happy Coding!
+I will leave you with a final remark. Wishing you all peace, love and the perfect Margarita!
+
+</div>
+</html>
+
+
+
+
+	
